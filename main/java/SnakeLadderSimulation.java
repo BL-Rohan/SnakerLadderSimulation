@@ -35,6 +35,7 @@ public class SnakeLadderSimulation {
     public void checkOptions() {
         Random random = new Random();
         optionsCheckValue = random.nextInt(3) + PLAYER_ONE;
+        rollDice();
         if (optionsCheckValue == 1) {
             position = position + 0;
         }
@@ -44,11 +45,13 @@ public class SnakeLadderSimulation {
         if (optionsCheckValue == 3) {
             position = position + rollDiceValue;
         }
+
     }
+
+
 
     public static void main(String[] args) {
         SnakeLadderSimulation snakeLadderSimulation = new SnakeLadderSimulation();
-        snakeLadderSimulation.rollDice();
         snakeLadderSimulation.checkOptions();
 
     }
