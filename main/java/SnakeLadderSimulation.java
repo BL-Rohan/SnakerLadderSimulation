@@ -26,6 +26,7 @@ public class SnakeLadderSimulation {
         Random random = new Random();
         rollDiceValue = random.nextInt(6) + PLAYER_ONE;
 
+
     }
     /*
      * @author  : ROHAN KADAM
