@@ -15,6 +15,7 @@ public class SnakeLadderSimulation {
     int rollDiceValue;
     int optionsCheckValue;
     int position = START_POSITION;
+    int dice_count=START_POSITION;
 
 
     /*
@@ -25,6 +26,8 @@ public class SnakeLadderSimulation {
     public void rollDice() {
         Random random = new Random();
         rollDiceValue = random.nextInt(6) + PLAYER_ONE;
+        dice_count=dice_count+1;
+        System.out.println("Dice Count:-  "+ dice_count);
 
 
     }
@@ -57,7 +60,7 @@ public class SnakeLadderSimulation {
 
         while (position < END_POSITION) {
             checkOptions();
-            System.out.println(position);
+            System.out.println("Player Position:-  "+position);
             if (position < START_POSITION) {
                 position = START_POSITION;
             }
@@ -66,6 +69,7 @@ public class SnakeLadderSimulation {
             }
         }
     }
+
 
 
 
