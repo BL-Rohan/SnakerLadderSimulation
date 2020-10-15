@@ -60,25 +60,17 @@ public class SnakeLadderSimulation {
             if (position < START_POSITION) {
                 position = START_POSITION;
             }
+            if(position>END_POSITION){
+                position=position-rollDiceValue;
+            }
         }
     }
 
-    /*
-     * @author  : ROHAN KADAM
-     * @purpose : To play till the Player reaches the winning position 100.
-     * @date    : 15/10/2020
-     * */
-    public void tillWinningPosition(){
-        if(position>END_POSITION){
-            position=position-rollDiceValue;
-            playerPlaysTillWinning();
-        }
-    }
+
 
     public static void main(String[] args) {
         SnakeLadderSimulation snakeLadderSimulation = new SnakeLadderSimulation();
         snakeLadderSimulation.playerPlaysTillWinning();
-        snakeLadderSimulation.tillWinningPosition();
 
     }
 }
